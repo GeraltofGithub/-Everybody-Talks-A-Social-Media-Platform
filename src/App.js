@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 function Layout() {
   const { user } = useSelector((state) => state.user);
   const location = useLocation();
-  console.log(user);
+  
   return user?.token ? (
     <Outlet />
   ) : (
@@ -15,7 +15,7 @@ function Layout() {
 
 function App() {
   const { theme } = useSelector((state) => state.theme);
-    
+  
   return (
     <div data-theme={theme} className='w-full min-h-[100vh]'>
       <Routes>
